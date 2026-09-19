@@ -23,9 +23,12 @@ def user_input_features():
 
 df = user_input_features()
 
-nobel =  pd.read_csv('predicciones_nobel.csv', encoding='latin-1')
-X = nobel["Texto"]
-y = nobel.Label
+#nobel =  pd.read_csv('predicciones_nobel.csv', encoding='latin-1')
+#X = nobel["Texto"]
+#y = nobel.Label
+nobel = pd.read_csv('predicciones_nobel.csv', encoding='latin-1')
+st.write("Columnas del archivo:")
+st.write(nobel.columns.tolist())
 
 vect = CountVectorizer()
 X_dtm = vect.fit_transform(X)
