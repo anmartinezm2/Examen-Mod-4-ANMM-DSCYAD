@@ -24,7 +24,7 @@ def user_input_features():
 df = user_input_features()
 
 nobel =  pd.read_csv('predicciones_nobel.csv', encoding='latin-1')
-X = nobel.Text
+X = nobel["Texto"]
 y = nobel.Label
 
 vect = CountVectorizer()
