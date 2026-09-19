@@ -23,7 +23,7 @@ def user_input_features():
 
 df = user_input_features()
 
-nobel =  pd.read_csv('predicciones_nobel.csv', encoding='latin-1')
+nobel =  pd.read_csv('predicciones_nobel.csv', encoding='utf-8-sig')
 X = nobel["Texto"]
 y = nobel.Categoria_Real
 
